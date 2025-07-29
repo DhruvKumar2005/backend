@@ -7,7 +7,7 @@ const ejs = require("ejs");
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
-app.set("views",path.join(__dirname,"views"));
+app.set("views",path.join(__dirname,"..views"));
 // 
 app.listen(port,()=>{
     console.log(`Server is running on port ${port}`);
@@ -18,4 +18,4 @@ app.get("/", (req,res)=>{
 })
 
 
-modules.exports=app;
+module.exports=app;
